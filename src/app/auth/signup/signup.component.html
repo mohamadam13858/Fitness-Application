@@ -1,18 +1,11 @@
-<section>
-    <form>
+<section class="signupForm">
+    <form class="column" #F="ngForm" (ngSubmit)="onSubmit(F)">
         <mat-form-field>
-            <input matInput type="text" placeholder="Email">
+            <input matInput type="text" placeholder="Email" ngModel name="Email">
         </mat-form-field>
-        <br>
         <mat-form-field>
-            <input matInput type="text" placeholder="Password">
+            <input matInput type="text" placeholder="Password" ngModel name="Password">
         </mat-form-field>
+        <button mat-raised-button type="submit">submit</button>
     </form>
-</section>
-
-
-<section id="container">
-    <div id="child1" class="child"></div>
-    <div id="child2" class="child"></div>
-    <div id="child3" class="child"></div>
 </section>

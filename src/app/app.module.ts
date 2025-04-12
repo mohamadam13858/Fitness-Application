@@ -10,6 +10,11 @@ import { NewTrainingComponent } from './new-training/new-training.component';
 import { CurrentTrainingComponent } from './current-training/current-training.component';
 import { PastTrainingComponent } from './past-training/past-training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FormsModule } from '@angular/forms';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +29,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

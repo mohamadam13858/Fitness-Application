@@ -4,11 +4,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatDatepickerModule } from '@angular/material/datepicker'
-import {MatNativeDateModule} from '@angular/material/core'
-import {MatCheckboxModule} from '@angular/material/checkbox'
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatNativeDateModule } from '@angular/material/core'
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon'
 
 
 
@@ -19,11 +19,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
-        MatDatepickerModule , 
-        MatNativeDateModule , 
+        MatDatepickerModule,
+        MatNativeDateModule,
         MatCheckboxModule,
-        MatSidenavModule , 
-        MatToolbarModule
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule
 
 
     ],
@@ -35,8 +36,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
         MatDatepickerModule,
         MatNativeDateModule,
         MatCheckboxModule,
-        MatSidenavModule , 
-        MatToolbarModule
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule
     ]
 })
 

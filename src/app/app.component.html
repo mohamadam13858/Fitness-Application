@@ -15,16 +15,29 @@
 
     <mat-sidenav-content>
 
-        <mat-toolbar>
-            <div>LOGO</div>
-            <div>
-                <a routerLink="/signup">Signup</a>
-                <a routerLink="/login">Login</a>
-                <a routerLink="/logout">Logout</a>
+        <mat-toolbar class="toolbar display">
+            <div class="center color">
+                <button class="color" mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <div>لوگو</div>
             </div>
-            <div>
-                <button (click)="sidenav.toggle()">Tggle sidenav</button>
+
+            <div class="">
+                <ul class="items">
+                    <li>
+                        <a routerLink="/signup">ثبت نام</a>
+                    </li>
+                    <li>
+                        <a routerLink="/login">ورود</a>
+                    </li>
+                    <li>
+                        <a routerLink="/training">تمرین</a>
+
+                    </li>
+                </ul>
             </div>
+
 
         </mat-toolbar>
         <main>

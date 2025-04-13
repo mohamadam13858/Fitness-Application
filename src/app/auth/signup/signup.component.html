@@ -1,7 +1,7 @@
-<section class="signupForm">
+<section class="signupForm marginTop">
     <form class="column" #F="ngForm" (ngSubmit)="onSubmit(F)">
 
-        <mat-form-field>
+        <mat-form-field class="marginTop">
             <input matInput type="text" email placeholder="ایمیل" ngModel name="Email" required #emailInput="ngModel">
             <mat-error *ngIf="emailInput.hasError('required')">ایمیل نباید خالی باشد </mat-error>
             <mat-error *ngIf="!emailInput.hasError('required')">ایمیل نامعتبر است</mat-error>

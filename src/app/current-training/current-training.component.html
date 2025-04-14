@@ -2,5 +2,5 @@
     <mat-progress-spinner [value]="progress"></mat-progress-spinner>
     <h1>{{progress}}%</h1>
     <p>ادامه بده تو میتونی</p>
-    <button mat-raised-button>توقف</button>
+    <button mat-raised-button (click)="onStop()">توقف</button>
 </section>

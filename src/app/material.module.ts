@@ -9,8 +9,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'
-import {MatListModule} from '@angular/material/list'
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list'
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 
 @NgModule({
@@ -24,9 +28,11 @@ import {MatTabsModule} from '@angular/material/tabs';
         MatCheckboxModule,
         MatSidenavModule,
         MatToolbarModule,
-        MatIconModule , 
-        MatListModule ,
-        MatTabsModule
+        MatIconModule,
+        MatListModule,
+        MatTabsModule,
+        MatCardModule,
+        MatSelectModule
 
 
     ],
@@ -40,9 +46,11 @@ import {MatTabsModule} from '@angular/material/tabs';
         MatCheckboxModule,
         MatSidenavModule,
         MatToolbarModule,
-        MatIconModule , 
-        MatListModule ,
-        MatTabsModule
+        MatIconModule,
+        MatListModule,
+        MatTabsModule,
+        MatCardModule,
+        MatSelectModule
     ]
 })
 

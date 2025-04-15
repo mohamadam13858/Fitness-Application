@@ -10,7 +10,7 @@ import { Exercise } from "./exercise.model";
 export class TrainingService {
 
 
-    exerciseChanged = new Subject<Exercise>()
+    exerciseChanged = new Subject<Exercise | null>()
 
 
 
@@ -20,6 +20,9 @@ export class TrainingService {
         { id: 'side-iunges', name: 'لانچ اسکوات', duration: 120, calories: 18 },
         { id: 'burpees', name: 'شنا', duration: 68, calories: 8 },
     ]
+
+
+    private exercisesFinish: Exercise[] = []
 
 
     private runningExercise: Exercise | null = null;
@@ -41,6 +44,18 @@ export class TrainingService {
 
     getRunningExercise() {
         return { ...this.runningExercise };
+    }
+
+    completeExecise() {
+        this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'complated' })
+        this.runningExercise = null
+        this.exerciseChanged.next(null)
+    }
+
+    cancelExercise(progress: number) {
+        this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'complated', duration: this.runningExercise?.duration! * progress / 100 , calories:this.runningExercise?.calories! * progress / 100 })
+        this.runningExercise = null
+        this.exerciseChanged.next(null)
     }
 
 

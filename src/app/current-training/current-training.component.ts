@@ -15,15 +15,21 @@ export class CurrentTrainingComponent implements OnInit {
 
   timer: any;
 
+
+  name: string | null = null
+
+
   @Output() dialogState = new EventEmitter();
 
 
-  constructor(private dialog: MatDialog  , private trainingService : TrainingService ) {
+  constructor(private dialog: MatDialog, private trainingService: TrainingService) {
 
   }
 
   ngOnInit(): void {
     this.startInterval()
+    const Name = this.trainingService.getRunningExercise().name
+    this.name = Name!
   }
 
 
@@ -54,5 +60,7 @@ export class CurrentTrainingComponent implements OnInit {
 
     })
   }
+
+
 
 }

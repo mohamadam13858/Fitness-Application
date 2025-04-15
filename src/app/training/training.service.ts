@@ -50,12 +50,14 @@ export class TrainingService {
         this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'complated' })
         this.runningExercise = null
         this.exerciseChanged.next(null)
+        
     }
 
     cancelExercise(progress: number) {
-        this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'complated', duration: this.runningExercise?.duration! * progress / 100 , calories:this.runningExercise?.calories! * progress / 100 })
+        this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'canceled', duration: this.runningExercise?.duration! * progress / 100 , calories:this.runningExercise?.calories! * progress / 100 })
         this.runningExercise = null
         this.exerciseChanged.next(null)
+        
     }
 
 

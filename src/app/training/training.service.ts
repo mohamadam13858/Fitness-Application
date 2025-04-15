@@ -5,6 +5,8 @@ import { Exercise } from "./exercise.model";
 
 
 
+
+
 export class TrainingService {
 
 
@@ -32,13 +34,14 @@ export class TrainingService {
 
     startExercise(selectedId: string) {
         this.runningExercise = this.availableExercises.find(ex => ex.id === selectedId)!;
-
-
         this.exerciseChanged.next({ ...this.runningExercise })
     }
 
 
 
+    getRunningExercise() {
+        return { ...this.runningExercise };
+    }
 
 
 }

@@ -10,17 +10,8 @@
         <mat-form-field>
             <mat-label>تمرین مورد نظر</mat-label>
             <mat-select>
-                <mat-option value="شنا">
-                    شنا
-                </mat-option>
-                <mat-option value="دراز و نشست">
-                    دراز و نشست
-                </mat-option>
-                <mat-option value="پلانک">
-                    پلانک
-                </mat-option>
-                <mat-option value="اسکوات">
-                    اسکوات
+                <mat-option *ngFor="let item of exercises" [value]="item.id">
+                    {{item.name}}
                 </mat-option>
             </mat-select>
         </mat-form-field>

@@ -60,5 +60,9 @@ export class TrainingService {
         
     }
 
+    getCompleteOrCancelExercises(){
+        return [...this.exercisesFinish]
+    }
+
 
 }

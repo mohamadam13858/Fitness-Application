@@ -36,4 +36,9 @@ ngOnDestroy(): void {
         this.sidenavToggle.emit()
   }
 
+
+  onLogout(){
+    this.authService.logout()
+  }
+
 }

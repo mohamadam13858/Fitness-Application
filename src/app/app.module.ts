@@ -18,6 +18,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { StopTrainingComponent } from './current-training/stop-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { PersianDatePipe } from './persian-date.pipe';
+import { TranslationPipe } from './translation.pipe';
 
 
 
@@ -34,7 +36,9 @@ import { TrainingService } from './training/training.service';
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    PersianDatePipe,
+    TranslationPipe
   ],
   imports: [
     BrowserModule,

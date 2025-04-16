@@ -46,6 +46,8 @@ export class TrainingService {
 
 
 
+    
+
 
     getAvailableExercises() {
         return this.availableExercises.slice()
@@ -80,6 +82,7 @@ export class TrainingService {
     getCompleteOrCancelExercises() {
         return [...this.exercisesFinish]
     }
+
 
 
 }

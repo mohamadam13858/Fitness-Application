@@ -20,8 +20,8 @@ import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { PersianDatePipe } from './persian-date.pipe';
 import { TranslationPipe } from './translation.pipe';
-
-
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { PersianPaginatorIntl } from './pagination.translate';
 
 
 @NgModule({
@@ -49,8 +49,9 @@ import { TranslationPipe } from './translation.pipe';
   providers: [
     { provide: DateAdapter, useClass: MaterialPersianDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: PERSIAN_DATE_FORMATS },
-    AuthService , 
-    TrainingService
+    AuthService,
+    TrainingService,
+    { provide: MatPaginatorIntl, useClass: PersianPaginatorIntl }
   ],
   bootstrap: [AppComponent]
 })

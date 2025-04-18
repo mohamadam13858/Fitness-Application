@@ -46,7 +46,7 @@ export class TrainingService {
 
 
 
-    
+
 
 
     getAvailableExercises() {
@@ -65,7 +65,7 @@ export class TrainingService {
         return { ...this.runningExercise };
     }
 
-    completeExecise() {
+    completeExercise() {
         this.exercisesFinish.push({ ...this.runningExercise!, date: new Date(), state: 'complated' })
         this.runningExercise = null
         this.exerciseChanged.next(null)
@@ -82,6 +82,8 @@ export class TrainingService {
     getCompleteOrCancelExercises() {
         return [...this.exercisesFinish]
     }
+
+
 
 
 

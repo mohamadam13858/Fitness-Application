@@ -10,7 +10,7 @@
         <mat-form-field class="marginTop" hintLabel="رمز عبور حداقل باید شش کاراکتر داشته باشد">
             <input matInput type="text" placeholder="رمز عبور " ngModel name="Password" required minlength="6"
                 #pwInput="ngModel">
-            <mat-hint align="end">{{pwInput.value.length}} / 6</mat-hint>
+            <mat-hint align="end">{{pwInput.value?.length}} / 6</mat-hint>
             <mat-error>رمز عبور حداقل باید شش کاراکتر داشته باشد </mat-error>
         </mat-form-field>
 

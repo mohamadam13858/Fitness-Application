@@ -5,4 +5,4 @@ export interface Exercise {
     calories: number,
     date?: Date,
     state?: 'complated' | 'canceled' | null
-}
+}   

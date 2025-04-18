@@ -10,7 +10,7 @@
                 <mat-form-field>
                     <mat-label>تمرین مورد نظر</mat-label>
                     <mat-select ngModel name="exercise" required>
-                        <mat-option *ngFor="let item of exercises" [value]="item.id">
+                        <mat-option *ngFor="let item of exercises$ " [value]="item.id">
                             {{item.name}}
                         </mat-option>
                     </mat-select>

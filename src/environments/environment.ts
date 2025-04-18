@@ -1,4 +1,5 @@
 export const enviroment = {
+    production: false,
     firebaseConfig: {
         apiKey: "AIzaSyAzVB2XjEwL37zaoVe0iFiqcHHKlfmQMqA",
         authDomain: "fitness-b4cf4.firebaseapp.com",

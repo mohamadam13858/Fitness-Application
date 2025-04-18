@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { inject, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,9 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { PersianPaginatorIntl } from './pagination.translate';
 import { AngularFireModule } from '@angular/fire/compat'
 import { enviroment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,13 +48,14 @@ import { enviroment } from '../environments/environment';
     AppRoutingModule,
     MaterialModule,
     FormsModule,
-    AngularFireModule.initializeApp(enviroment.firebaseConfig)
+    AngularFireModule.initializeApp(enviroment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [
+    TrainingService,
     { provide: DateAdapter, useClass: MaterialPersianDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: PERSIAN_DATE_FORMATS },
     AuthService,
-    TrainingService,
     { provide: MatPaginatorIntl, useClass: PersianPaginatorIntl }
   ],
   bootstrap: [AppComponent]

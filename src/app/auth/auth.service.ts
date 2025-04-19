@@ -3,7 +3,7 @@ import { AuthData } from './auth.model'
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-
+import { AngularFireAuth } from '@angular/fire/compat/auth'
 
 @Injectable(
 
@@ -18,8 +18,8 @@ export class AuthService {
     private user: User | null = null;
 
 
-    constructor(private router : Router) {
-        
+    constructor(private router: Router , private fireAuth : AngularFireAuth) {
+
     }
 
 
@@ -56,7 +56,7 @@ export class AuthService {
         return this.user != null
     }
 
-    private successfullAuth (){
+    private successfullAuth() {
         this.authChange.next(true)
         this.router.navigate(['/training'])
     }

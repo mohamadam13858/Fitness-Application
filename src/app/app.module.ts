@@ -25,6 +25,7 @@ import { PersianPaginatorIntl } from './pagination.translate';
 import { AngularFireModule } from '@angular/fire/compat'
 import { enviroment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    AngularFireAuthModule,
     FormsModule,
     AngularFireModule.initializeApp(enviroment.firebaseConfig),
     AngularFirestoreModule
